@@ -29,6 +29,7 @@ There is an 'Info' button at the top-right of each page that provides details ab
 
 ```
 main.py                   # FastAPI app — CORS, static files, router mounts, init_db
+
 frontend/                 # CDN-based React (no build step)
   api.js                  # window.API — wrappers for all backend endpoints
   app.jsx                 # router shell, webcam hook, layout
@@ -37,30 +38,35 @@ frontend/                 # CDN-based React (no build step)
   pages3.jsx              # Captioning
   primitives.jsx          # Shared UI components
   data.js                 # Static constants (COCO classes, etc.)
-routers/
-  face.py                 # GET /face/persons, POST /face/register, POST /face/recognize, DELETE /face/{id}
-  detection.py            # POST /detection/detect
-  segment.py              # POST /segment/segment
-  haardcascade.py         # POST /haardcascade/detect
-  caption.py              # GET /caption/vision-models, POST /caption/caption (proxies to Ollama)
-src/                      # ML engine implementations
-  face_recognition.py     # InsightFace buffalo_l (512-D embeddings, SCRFD detector)
-  object_detection.py     # YOLOv8 detection
-  image_segmentation.py   # YOLOv8 segmentation
-  haarcascade_detection.py
-database/
-  face_sqlite.py          # SQLite — persons + recognition_logs tables
-  face_vector.py          # Qdrant local — 512-D cosine collection
-haard/                    # Haar cascade CLI (standalone, not part of web app)
-  haar_app.py             # Interactive webcam detection menu
-  download_cascades.py    # Downloads OpenCV cascade XML files
+
 data/
   faces.db                # SQLite database (created on first run)
   qdrant/                 # Qdrant vector store (created on first run)
   haarcascades/           # OpenCV cascade XML files
-models/
-  yolo26n.pt / .mlpackage       # Detection weights
-  yolo26n-seg.pt / .mlpackage   # Segmentation weights
+
+database/
+  face_sqlite.py          # SQLite — persons + recognition_logs tables
+  face_vector.py          # Qdrant local — 512-D cosine collection
+
+models/                   # Models related to each functionalities are located in this folder
+  object_detection
+  pose_estimation
+  segmentation
+  export_coreml.py        # To export yolo26n.pt in CoreML format (optimized for MACOS)
+
+routers/
+  face.py
+  detection.py
+  segment.py
+  haardcascade.py
+  caption.py
+
+src/                      # ML engine implementations
+  face_recognition.py
+  object_detection.py
+  image_segmentation.py
+  haarcascade_detection.py
+  
 ```
 
 ## Models
