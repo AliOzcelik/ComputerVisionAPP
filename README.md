@@ -3,12 +3,20 @@
 Computer vision web application with face recognition, object detection, Haar cascade detection, image segmentation, pose estimation, and captioning/VQA.
 
 ## Features
+
 - **Face Recognition** — Register people by photo, recognize them live via webcam or uploaded image. 512-D InsightFace embeddings stored in Qdrant; gallery persists across sessions.
 - **Object Detection** — YOLO-based detection with 80 COCO classes
 - **Image Segmentation** — YOLO segmentation with mask overlays
 - **Haar Cascade Detector** — 12 configurable OpenCV classifiers (face, eye, smile, body, cat face...)
 - **Pose Estimation** — Human keypoint detection with skeleton overlays
 - **Captioning & VQA** — Local Ollama vision models for image descriptions and visual questions
+
+## Outputs
+![Face recognition result](output/face-result.png)
+![Object detection result](output/object-detection.png)
+![Segmentation result](output/segmentation.png)
+![Haar result](output/haar%20result.png)
+ 
 
 ## Architecture
 
