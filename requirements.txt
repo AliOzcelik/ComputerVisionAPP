@@ -1,0 +1,13 @@
+torch
+torchvision
+ultralytics
+opencv-python
+insightface
+onnxruntime
+qdrant_client
+fastapi
+uuid
+coremltools
+uvicorn
+python-multipart
+ollama
