@@ -12,8 +12,8 @@ Computer vision web application with face recognition, object detection, Haar ca
 - **Captioning & VQA** — Local Ollama vision models for image descriptions and visual questions
 
 ## Outputs
-<img src="output/face-result.png" width="700">
-<img src="output/object-detection.png" width="700">
+<img src="outputs/face-result.png" width="700">
+<img src="outputs/object-detection.png" width="700">
  
 
 ## Architecture
