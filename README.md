@@ -11,36 +11,6 @@ Computer vision web application with face recognition, object detection, Haar ca
 - **Pose Estimation** — Human keypoint detection with skeleton overlays
 - **Captioning & VQA** — Local Ollama vision models for image descriptions and visual questions
 
-## Setup
-
-```bash
-pip install -r requirements.txt
-```
-
-## Run
-
-```bash
-python main.py
-```
-
-Open http://localhost:8000
-
-## API Endpoints
-
-| Method | Endpoint | Description |
-|--------|----------|-------------|
-| `GET` | `/face/persons` | List all registered persons |
-| `POST` | `/face/register` | Register a new face (`name` query param, `image` file) |
-| `POST` | `/face/recognize` | Recognize a face (`threshold` query param, `image` file) |
-| `DELETE` | `/face/{person_id}` | Delete a person from Qdrant and SQLite |
-| `POST` | `/detection/detect` | YOLO object detection (`image` file) |
-| `POST` | `/segment/segment` | YOLO image segmentation (`image` file) |
-| `POST` | `/haardcascade/detect` | Haar cascade detection (`image` file) |
-| `GET` | `/caption/vision-models` | List Ollama vision-capable models |
-| `POST` | `/caption/caption` | Caption an image via Ollama (`model`, `prompt` query params, `image` file) |
-
-Interactive API docs: http://localhost:8000/docs
-
 ## Architecture
 
 ```
@@ -84,14 +54,68 @@ models/
 | Model | Task | Backend |
 |-------|------|---------|
 | InsightFace buffalo_l | Face embedding + detection | CoreML (macOS) / CPU |
-| YOLOv8n | Object detection | CoreML (macOS) / CPU |
-| YOLOv8n-seg | Segmentation | CoreML (macOS) / CPU |
+| YOLO26n | Object detection | CoreML (macOS) / CPU |
+| YOLO26n-seg | Segmentation | CoreML (macOS) / CPU |
+| YOLO26n-pose | Pose Estimation | CoreML (macOS) / CPU |
 | OpenCV Haar cascades | Classic face/body detection | CPU |
 | Ollama vision models | Captioning / VQA | Local Ollama (`localhost:11434`) |
 
 InsightFace buffalo_l is downloaded automatically to `~/.insightface/` on first use.
 
-Captioning requires [Ollama](https://ollama.com) running locally with at least one vision model pulled (e.g. `ollama pull llava`).
+Captioning requires [Ollama](https://ollama.com) running locally with at least one vision model pulled (e.g. `ollama pull qwen3-vl:2b`).
+
+
+## Setup
+
+Create and activate a Python virtual environment.
+
+### macOS / Linux
+
+```bash
+python3 -m venv .venv
+source .venv/bin/activate
+python -m pip install --upgrade pip
+pip install -r requirements.txt
+```
+
+### Windows PowerShell
+
+```powershell
+py -m venv .venv
+.\.venv\Scripts\Activate.ps1
+python -m pip install --upgrade pip
+pip install -r requirements.txt
+```
+
+If PowerShell blocks activation, run:
+
+```powershell
+Set-ExecutionPolicy -ExecutionPolicy RemoteSigned -Scope CurrentUser
+```
+
+Then activate again:
+
+```powershell
+.\.venv\Scripts\Activate.ps1
+```
+
+### Windows Command Prompt
+
+```bat
+py -m venv .venv
+.\.venv\Scripts\activate.bat
+python -m pip install --upgrade pip
+pip install -r requirements.txt
+```
+
+## Run
+
+```bash
+python main.py
+```
+
+Open http://localhost:8000
+Interactive API docs: http://localhost:8000/docs
 
 ## Platform Notes
 
