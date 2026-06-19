@@ -3,7 +3,6 @@
 Computer vision web application with face recognition, object detection, Haar cascade detection, image segmentation, pose estimation, and captioning/VQA.
 
 ## Features
-
 - **Face Recognition** — Register people by photo, recognize them live via webcam or uploaded image. 512-D InsightFace embeddings stored in Qdrant; gallery persists across sessions.
 - **Object Detection** — YOLO-based detection with 80 COCO classes
 - **Image Segmentation** — YOLO segmentation with mask overlays
