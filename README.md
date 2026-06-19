@@ -17,12 +17,6 @@ Computer vision web application with face recognition, object detection, Haar ca
 pip install -r requirements.txt
 ```
 
-Download Haar cascade XML files (required for cascade detection):
-
-```bash
-python haard/download_cascades.py
-```
-
 ## Run
 
 ```bash
