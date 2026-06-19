@@ -1,0 +1,122 @@
+{
+  "frontalface_default": {
+    "name": "Face",
+    "filename": "haarcascade_frontalface_default.xml",
+    "color": [255, 0, 0],
+    "scale_factor": 1.3,
+    "min_neighbors": 5,
+    "min_size": [30, 30],
+    "apply_on_roi": false,
+    "roi_region": "full"
+  },
+  "frontalface_alt": {
+    "name": "Face (Alt)",
+    "filename": "haarcascade_frontalface_alt.xml",
+    "color": [255, 50, 0],
+    "scale_factor": 1.3,
+    "min_neighbors": 5,
+    "min_size": [30, 30],
+    "apply_on_roi": false,
+    "roi_region": "full"
+  },
+  "frontalface_alt2": {
+    "name": "Face (Alt2)",
+    "filename": "haarcascade_frontalface_alt2.xml",
+    "color": [255, 100, 0],
+    "scale_factor": 1.3,
+    "min_neighbors": 5,
+    "min_size": [30, 30],
+    "apply_on_roi": false,
+    "roi_region": "full"
+  },
+  "profileface": {
+    "name": "Profile",
+    "filename": "haarcascade_profileface.xml",
+    "color": [255, 128, 0],
+    "scale_factor": 1.3,
+    "min_neighbors": 5,
+    "min_size": [30, 30],
+    "apply_on_roi": false,
+    "roi_region": "full"
+  },
+  "eye": {
+    "name": "Eye",
+    "filename": "haarcascade_eye.xml",
+    "color": [0, 255, 0],
+    "scale_factor": 1.1,
+    "min_neighbors": 3,
+    "min_size": [20, 20],
+    "apply_on_roi": true,
+    "roi_region": "upper"
+  },
+  "eye_tree_eyeglasses": {
+    "name": "Eye (Glasses)",
+    "filename": "haarcascade_eye_tree_eyeglasses.xml",
+    "color": [0, 255, 100],
+    "scale_factor": 1.1,
+    "min_neighbors": 3,
+    "min_size": [20, 20],
+    "apply_on_roi": true,
+    "roi_region": "upper"
+  },
+  "smile": {
+    "name": "Smile",
+    "filename": "haarcascade_smile.xml",
+    "color": [0, 255, 255],
+    "scale_factor": 1.8,
+    "min_neighbors": 20,
+    "min_size": [25, 25],
+    "apply_on_roi": true,
+    "roi_region": "lower"
+  },
+  "upperbody": {
+    "name": "Upper Body",
+    "filename": "haarcascade_upperbody.xml",
+    "color": [255, 0, 255],
+    "scale_factor": 1.1,
+    "min_neighbors": 3,
+    "min_size": [50, 50],
+    "apply_on_roi": false,
+    "roi_region": "full"
+  },
+  "lowerbody": {
+    "name": "Lower Body",
+    "filename": "haarcascade_lowerbody.xml",
+    "color": [128, 0, 255],
+    "scale_factor": 1.1,
+    "min_neighbors": 3,
+    "min_size": [50, 50],
+    "apply_on_roi": false,
+    "roi_region": "full"
+  },
+  "fullbody": {
+    "name": "Full Body",
+    "filename": "haarcascade_fullbody.xml",
+    "color": [128, 0, 128],
+    "scale_factor": 1.1,
+    "min_neighbors": 3,
+    "min_size": [50, 100],
+    "apply_on_roi": false,
+    "roi_region": "full"
+  },
+  "frontalcatface": {
+    "name": "Cat Face",
+    "filename": "haarcascade_frontalcatface.xml",
+    "color": [0, 128, 255],
+    "scale_factor": 1.1,
+    "min_neighbors": 3,
+    "min_size": [30, 30],
+    "apply_on_roi": false,
+    "roi_region": "full"
+  },
+  "frontalcatface_extended": {
+    "name": "Cat Face (Ext)",
+    "filename": "haarcascade_frontalcatface_extended.xml",
+    "color": [0, 180, 255],
+    "scale_factor": 1.1,
+    "min_neighbors": 3,
+    "min_size": [30, 30],
+    "apply_on_roi": false,
+    "roi_region": "full"
+  }
+}

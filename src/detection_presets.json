@@ -1,0 +1,38 @@
+{
+  "face_complete": {
+    "name": "Face Detection (Complete)",
+    "description": "Detects faces, eyes, and smiles",
+    "primary": ["frontalface_default"],
+    "secondary": ["eye", "smile"]
+  },
+  "face_with_glasses": {
+    "name": "Face Detection (With Glasses)",
+    "description": "Detects faces and eyes with glasses support",
+    "primary": ["frontalface_default"],
+    "secondary": ["eye_tree_eyeglasses"]
+  },
+  "face_profile": {
+    "name": "Face Detection (Front + Profile)",
+    "description": "Detects frontal and profile faces",
+    "primary": ["frontalface_default", "profileface"],
+    "secondary": []
+  },
+  "body_detection": {
+    "name": "Body Detection",
+    "description": "Detects full and upper body",
+    "primary": ["fullbody", "upperbody"],
+    "secondary": []
+  },
+  "cat_detection": {
+    "name": "Cat Face Detection",
+    "description": "Detects cat faces",
+    "primary": ["frontalcatface", "frontalcatface_extended"],
+    "secondary": []
+  },
+  "all_faces": {
+    "name": "All Face Variants",
+    "description": "Uses all face detection cascades",
+    "primary": ["frontalface_default", "frontalface_alt", "frontalface_alt2", "profileface"],
+    "secondary": ["eye", "smile"]
+  }
+}
