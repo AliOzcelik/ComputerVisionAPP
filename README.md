@@ -2,6 +2,9 @@
 
 Computer vision web application with face recognition, object detection, Haar cascade detection, image segmentation, pose estimation, and captioning/VQA.
 
+### Important Note
+There is an 'Info' button at the top-right of each page that provides details about your current page.
+
 ## Features
 
 - **Face Recognition** — Register people by photo, recognize them live via webcam or uploaded image. 512-D InsightFace embeddings stored in Qdrant; gallery persists across sessions.
